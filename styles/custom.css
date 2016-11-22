@@ -1,136 +1,171 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
-
 body {
-  font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 #title {
-  text-align: center;
-  display: block;
-  margin: 60 auto 35;
-  width: 230px;
-  height: 230px;
-}
-
-#logininputs {
-/*  position: absolute;
-  left: 50%;*/
+    text-align: center;
+    display: block;
+    margin: 30 auto 35;
+    width: 230px;
+    height: 230px;
 }
 
 hr {
-  width:100%;
-  height:1px;
-  background: #fff
+    width: 100%;
+    height: 1px;
+    background: #fff
 }
 
 h1 {
-  text-align: center;
-  font-size: 65px;
-  margin: 0 0 35;
-  font-weight: 300;
-  letter-spacing: -1;
+    text-align: center;
+    font-size: 50px;
+    margin: 0 0 35;
+    font-weight: 300;
+    letter-spacing: -1;
 }
-
-
 
 
 /* COPY AND PASTE CODE ========================= */
-.group 			  {
-  position:relative;
-  margin-bottom:45px;
-  margin: 0 auto 45;
-  width: 300px;
-/*  right:50%; */
+
+.group {
+    position: relative;
+    margin-bottom: 45px;
+    margin: 0 auto 45;
+    width: 450px;
 }
-input 				{
-  font-size:18px;
-  padding:10px 10px 10px 5px;
-  display:block;
-  width:300px;
-  border:none;
-  border-bottom:1px solid #757575;
+
+input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 450px;
+    border: none;
+    border-bottom: 1px solid #757575;
 }
-input:focus 		{ outline:none; }
+
+input:focus {
+    outline: none;
+}
+
 
 /* LABEL ======================================= */
-label 				 {
-  color:#999;
-  font-size:18px;
-  font-weight:normal;
-  position:absolute;
-  pointer-events:none;
-  left:5px;
-  top:10px;
-  transition:0.2s ease all;
-  -moz-transition:0.2s ease all;
-  -webkit-transition:0.2s ease all;
+
+label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
 }
 
+
 /* active state */
-input:focus ~ label, input:valid ~ label 		{
-  top:-20px;
-  font-size:14px;
-  color:#345bb3;
+
+input:focus~label, input:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color: #345bb3;
 }
+
 
 /* BOTTOM BARS ================================= */
-.bar 	{ position:relative; display:block; width:300px; }
-.bar:before, .bar:after 	{
-  content:'';
-  height:2px;
-  width:0;
-  bottom:1px;
-  position:absolute;
-  background:#345bb3;
-  transition:0.2s ease all;
-  -moz-transition:0.2s ease all;
-  -webkit-transition:0.2s ease all;
-}
-.bar:before {
-  left:50%;
-}
-.bar:after {
-  right:50%;
+
+.bar {
+    position: relative;
+    display: block;
+    width: 450px;
 }
 
-/* active state */
-input:focus ~ .bar:before, input:focus ~ .bar:after {
-  width:50%;
+.bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #345bb3;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
 }
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+
+/* active state */
+
+input:focus~.bar:before, input:focus~.bar:after {
+    width: 50%;
+}
+
 
 /* HIGHLIGHTER ================================== */
+
 .highlight {
-  position:absolute;
-  height:60%;
-  width:100px;
-  top:25%;
-  left:0;
-  pointer-events:none;
-  opacity:0.5;
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
 }
+
 
 /* active state */
-input:focus ~ .highlight {
-  -webkit-animation:inputHighlighter 0.3s ease;
-  -moz-animation:inputHighlighter 0.3s ease;
-  animation:inputHighlighter 0.3s ease;
+
+input:focus~.highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
 }
+
 
 /* ANIMATIONS ================ */
-@-webkit-keyframes inputHighlighter {
-	from { background:#345bb3; }
-  to 	{ width:0; background:transparent; }
-}
-@-moz-keyframes inputHighlighter {
-	from { background:#345bb3; }
-  to 	{ width:0; background:transparent; }
-}
-@keyframes inputHighlighter {
-	from { background:#345bb3; }
-  to 	{ width:0; background:transparent; }
-}
-/* END OF COPY AND PAST CODE ================= */
 
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #345bb3;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #345bb3;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #345bb3;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+
+/* END OF COPY AND PAST CODE ================= */
 
 .myButton {
     background-color: rgba(255, 255, 255, 0);
@@ -146,6 +181,7 @@ input:focus ~ .highlight {
     font-weight: 400;
     text-decoration: none;
     margin: 0 auto;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
 .myButton:hover {
@@ -158,3 +194,21 @@ input:focus ~ .highlight {
     position: relative;
     top: 1px;
 }
+
+@media all and (max-width: 652px) {
+    .group {
+      width: 300px;
+    }
+    input {
+      width: 300px;
+    }
+    .bar {
+      width: 300px;
+    }
+    #title {
+      margin: 10 auto 25;
+    }
+    h1 {
+      font-size: 35px;
+      margin: 0 0 10;
+    }

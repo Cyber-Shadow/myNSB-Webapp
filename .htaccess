@@ -1,0 +1,7 @@
+ErrorDocument 404 /myNSB-Webapp/public/404.html
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+DirectoryIndex public/index.html

@@ -1,238 +1,220 @@
-    @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-#headertitle, #header {
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-    width: 176px
-}
-
-#header {
-    background-color: #005c9d;
-    width: 100%;
-}
-
-#leftheader {
-    letter-spacing: 0;
-    color: #fff;
-    position: absolute;
-    left: 196px;
-    top: 10px;
-    font-size: 35px;
-}
-
-#title {
-    text-align: center;
-    display: block;
-    margin: 30 auto 35;
-    width: 230px;
-    height: 230px;
-}
-
-h1 {
-    text-align: center;
-    font-size: 50px;
-    margin: 0 0 35;
-    font-weight: 300;
-    letter-spacing: -1;
-}
-
-
-/* COPY AND PASTE CODE ========================= */
-/*  LOL */
-
-.group {
-    position: relative;
-    margin-bottom: 45px;
-    margin: 0 auto 45;
-    width: 450px;
-}
-
-input {
-    font-size: 18px;
-    padding: 10px 10px 10px 5px;
-    display: block;
-    width: 450px;
-    border: none;
-    border-bottom: 1px solid #757575;
-}
-
-input:focus {
-    outline: none;
-}
-
-
-/* LABEL ======================================= */
-
-label {
-    color: #999;
-    font-size: 18px;
-    font-weight: normal;
-    position: absolute;
-    pointer-events: none;
-    left: 5px;
-    top: 10px;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-}
-
-
-/* active state */
-
-input:focus~label, input:valid~label {
-    top: -20px;
-    font-size: 14px;
-    color: #345bb3;
-}
-
-
-/* BOTTOM BARS ================================= */
-
-.bar {
-    position: relative;
-    display: block;
-    width: 450px;
-}
-
-.bar:before, .bar:after {
-    content: '';
-    height: 2px;
-    width: 0;
-    bottom: 0px;
-    position: absolute;
-    background: #345bb3;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-}
-
-.bar:before {
-    left: 50%;
-}
-
-.bar:after {
-    right: 50%;
-}
-
-
-/* active state */
-
-input:focus~.bar:before, input:focus~.bar:after {
-    width: 50%;
-}
-
-
-/* HIGHLIGHTER ================================== */
-
-.highlight {
-    position: absolute;
-    height: 60%;
-    width: 100px;
-    top: 25%;
-    left: 0;
-    pointer-events: none;
-    opacity: 0.5;
-}
-
-
-/* active state */
-
-input:focus~.highlight {
-    -webkit-animation: inputHighlighter 0.3s ease;
-    -moz-animation: inputHighlighter 0.3s ease;
-    animation: inputHighlighter 0.3s ease;
-}
-
-
-/* ANIMATIONS ================ */
-
-@-webkit-keyframes inputHighlighter {
-    from {
-        background: #345bb3;
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
     }
-    to {
-        width: 0;
-        background: transparent;
-    }
-}
 
-@-moz-keyframes inputHighlighter {
-    from {
-        background: #345bb3;
+    #headertitle, #header {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+        width: 176px
     }
-    to {
-        width: 0;
-        background: transparent;
-    }
-}
 
-@keyframes inputHighlighter {
-    from {
-        background: #345bb3;
+    #header {
+        background-color: #005c9d;
+        width: 100%;
     }
-    to {
-        width: 0;
-        background: transparent;
-    }
-}
 
-
-/* END OF COPY AND PAST CODE ================= */
-
-.myButton {
-    background-color: rgba(255, 255, 255, 0);
-    -moz-border-radius: 28px;
-    -webkit-border-radius: 28px;
-    border-radius: 28px;
-    border: 2px solid #345bb3;
-    display: block;
-    cursor: pointer;
-    color: #345bb3;
-    font-size: 17px;
-    padding: 16px 31px;
-    font-weight: 400;
-    text-decoration: none;
-    margin: 0 auto;
-    width: 130px;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-    /*  Copy pasted from CodeWeb source code*/
-    -o-transition: background 0.5s linear;
--moz-transition: background 0.5s linear;
--khtml-transition: background 0.5s linear;
--webkit-transition: background 0.5s linear;
--ms-transition: background 0.5s linear;
-transition: background 0.5s linear;
-transition: all 0.5s cubic-bezier(.25,.8,.25,1);
-}
-
-.myButton:hover {
-    background-color: #345bb3;
-    color: rgb(255, 255, 255);
-    font-weight: 400;
-}
-
-.myButton:active {
-    position: relative;
-    top: 1px;
-}
-
-@media all and (max-width: 652px) {
-    .group {
-        width: 300px;
-    }
-    input {
-        width: 300px;
-    }
-    .bar {
-        width: 300px;
-    }
-    #title {
-        margin: 10 auto 25;
-    }
-    h1 {
+    #leftheader {
+        letter-spacing: 0;
+        color: #fff;
+        position: absolute;
+        left: 196px;
+        top: 10px;
         font-size: 35px;
-        margin: 0 0 10;
     }
+
+    #title {
+        text-align: center;
+        display: block;
+        margin: 30 auto 35;
+        width: 230px;
+        height: 230px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 50px;
+        margin: 0 0 35;
+        font-weight: 300;
+        letter-spacing: -1;
+    }
+    /* COPY AND PASTE CODE ========================= */
+    /*  LOL */
+
+    .group {
+        position: relative;
+        margin-bottom: 45px;
+        margin: 0 auto 45;
+        width: 450px;
+    }
+
+    input {
+        font-size: 18px;
+        padding: 10px 10px 10px 5px;
+        display: block;
+        width: 450px;
+        border: none;
+        border-bottom: 1px solid #757575;
+    }
+
+    input:focus {
+        outline: none;
+    }
+    /* LABEL ======================================= */
+
+    label {
+        color: #999;
+        font-size: 18px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 10px;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+    }
+    /* active state */
+
+    input:focus~label, input:valid~label {
+        top: -20px;
+        font-size: 14px;
+        color: #345bb3;
+    }
+    /* BOTTOM BARS ================================= */
+
+    .bar {
+        position: relative;
+        display: block;
+        width: 450px;
+    }
+
+    .bar:before, .bar:after {
+        content: '';
+        height: 2px;
+        width: 0;
+        bottom: 0px;
+        position: absolute;
+        background: #345bb3;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+    }
+
+    .bar:before {
+        left: 50%;
+    }
+
+    .bar:after {
+        right: 50%;
+    }
+    /* active state */
+
+    input:focus~.bar:before, input:focus~.bar:after {
+        width: 50%;
+    }
+    /* HIGHLIGHTER ================================== */
+
+    .highlight {
+        position: absolute;
+        height: 60%;
+        width: 100px;
+        top: 25%;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.5;
+    }
+    /* active state */
+
+    input:focus~.highlight {
+        -webkit-animation: inputHighlighter 0.3s ease;
+        -moz-animation: inputHighlighter 0.3s ease;
+        animation: inputHighlighter 0.3s ease;
+    }
+    /* ANIMATIONS ================ */
+
+    @-webkit-keyframes inputHighlighter {
+        from {
+            background: #345bb3;
+        }
+        to {
+            width: 0;
+            background: transparent;
+        }
+    }
+
+    @-moz-keyframes inputHighlighter {
+        from {
+            background: #345bb3;
+        }
+        to {
+            width: 0;
+            background: transparent;
+        }
+    }
+
+    @keyframes inputHighlighter {
+        from {
+            background: #345bb3;
+        }
+        to {
+            width: 0;
+            background: transparent;
+        }
+    }
+    /* END OF COPY AND PAST CODE ================= */
+
+    .myButton {
+        background-color: rgba(255, 255, 255, 0);
+        -moz-border-radius: 28px;
+        -webkit-border-radius: 28px;
+        border-radius: 28px;
+        border: 2px solid #345bb3;
+        display: block;
+        cursor: pointer;
+        color: #345bb3;
+        font-size: 17px;
+        padding: 16px 31px;
+        font-weight: 400;
+        text-decoration: none;
+        margin: 0 auto;
+        width: 130px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+        /*  Copy pasted from CodeWeb source code*/
+        -o-transition: background 0.5s linear;
+        -moz-transition: background 0.5s linear;
+        -khtml-transition: background 0.5s linear;
+        -webkit-transition: background 0.5s linear;
+        -ms-transition: background 0.5s linear;
+        transition: background 0.5s linear;
+        transition: all 0.5s cubic-bezier(.25, .8, .25, 1);
+    }
+
+    .myButton:hover {
+        background-color: #345bb3;
+        color: rgb(255, 255, 255);
+        font-weight: 400;
+    }
+    
+    .myButton:active {
+        position: relative;
+        top: 1px;
+    }
+
+    @media all and (max-width: 652px) {
+        .group {
+            width: 300px;
+        }
+        input {
+            width: 300px;
+        }
+        .bar {
+            width: 300px;
+        }
+        #title {
+            margin: 10 auto 25;
+        }
+        h1 {
+            font-size: 35px;
+            margin: 0 0 10;
+        }

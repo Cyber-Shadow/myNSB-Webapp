@@ -1,4 +1,4 @@
-function(){
+function signIn(){
 
 const txtUser = document.getElementById('txtUser');
 const txtPassword = document.getElementById('txtPassword');

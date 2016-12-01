@@ -4,43 +4,44 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/custom.css">
     <meta name="viewport" content="width=device-width" initialScale="1.0">
+    <title>myNSB Push</title>
 </head>
 
 <body>
     <img src="img/logo-circle.png" id="title">
     <h1>Login</h1>
     <div>
-        <form name="login" id="logininputs" onsubmit="return validateForm()">
+        <form name="login" id="logininputs">
             <div class="group">
-                <input type="text" required>
+                <input type="text" id="txtUser" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Username</label>
             </div>
             <div class="group">
-                <input type="password" required>
+                <input type="password" id="txtPassword" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Password</label>
             </div>
-            <button class="myButton">Submit</button>
+            <button class="myButton" id="submit">Submit</button>
         </form>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
     <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyCL9BFpVzad8QczIXrnV9sE6plvdvET_SY",
-        authDomain: "mynsb-web.firebaseapp.com",
-        databaseURL: "https://mynsb-web.firebaseio.com",
-        storageBucket: "mynsb-web.appspot.com",
-        messagingSenderId: "352309344405"
-      };
-      firebase.initializeApp(config);
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA2-OO0V1Gh1M1MWn0Vb6x5UMpQrBinaIk",
+            authDomain: "mynsb-push-66612.firebaseapp.com",
+            databaseURL: "https://mynsb-push-66612.firebaseio.com",
+            storageBucket: "mynsb-push-66612.appspot.com",
+            messagingSenderId: "37539815928"
+        };
+        firebase.initializeApp(config);
     </script>
     <script src="js/jquery-3.1.0.min.js"></script>
-    <script src="js/login"></script>
+    <script src="js/loginValidation.js"></script>
 </body>
 
 </html>
